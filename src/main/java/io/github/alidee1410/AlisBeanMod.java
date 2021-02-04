@@ -35,7 +35,7 @@ public class AlisBeanMod
 
     private void setup(final FMLCommonSetupEvent event)
     {
-
+    	
     }
     
     public static class BeanModTab extends ItemGroup {
@@ -46,7 +46,7 @@ public class AlisBeanMod
 
 		@Override
 		public ItemStack createIcon() {
-			return ItemInit.LAMP.get().getDefaultInstance();
+			return ItemInit.HARICOT_BEANS.get().getDefaultInstance();
 		}
     }
 }

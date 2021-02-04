@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "alis_bean_mod:bowl_of_haricot_beans"
+    },
+    "result": "alis_bean_mod:boiling_bowl_of_haricot_beans",
+    "experience": 0.4,
+    "cookingtime": 400
+}

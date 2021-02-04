@@ -1,9 +1,10 @@
 package io.github.alidee1410.core.init;
 
 import io.github.alidee1410.AlisBeanMod;
-import io.github.alidee1410.common.items.SpecialItem;
+import io.github.alidee1410.common.items.CannedFoodItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,19 +15,28 @@ public class ItemInit {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AlisBeanMod.MOD_ID);
 	
 	// Items
-	public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
+	public static final RegistryObject<Item> TIN_CAN = ITEMS.register("tin_can",
 			() -> new Item(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB)));
-	
-	public static final RegistryObject<SpecialItem> SPECIAL_ITEM = ITEMS.register("special_item",
-			() -> new SpecialItem(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB)));
 
 	// Food
-	public static final RegistryObject<Item> BAKED_BEANS_CAN = ITEMS.register("baked_beans_can",
-			() -> new Item(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).food(FoodInit.BAKED_BEANS_CAN)));
+	public static final RegistryObject<Item> HARICOT_BEANS = ITEMS.register("haricot_beans",
+			() -> new Item(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).food(FoodInit.HARICOT_BEANS)));
+	
+	public static final RegistryObject<CannedFoodItem> CAN_OF_BAKED_BEANS = ITEMS.register("can_of_baked_beans",
+			() -> new CannedFoodItem(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).food(FoodInit.CAN_OF_BAKED_BEANS).maxStackSize(1)
+					.containerItem(ItemInit.TIN_CAN.get())));
+	
+	// Ingredients
+	public static final RegistryObject<Item> BOWL_OF_HARICOT_BEANS = ITEMS.register("bowl_of_haricot_beans",
+			() -> new Item(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).maxStackSize(1).containerItem(Items.BOWL)));
+	
+	public static final RegistryObject<Item> BOILING_BOWL_OF_HARICOT_BEANS = ITEMS.register("boiling_bowl_of_haricot_beans",
+			() -> new Item(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).maxStackSize(1).containerItem(Items.BOWL)));
+	
+	public static final RegistryObject<Item> BEAN_JUICE = ITEMS.register("bean_juice",
+			() -> new Item(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).maxStackSize(1).containerItem(Items.BOWL)));
 	
 	// Block Items
-	public static final RegistryObject<BlockItem> STEEL_BLOCK = ITEMS.register("steel_block",
-			() -> new BlockItem(BlockInit.STEEL_BLOCK.get(), new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB)));
 	
 	public static final RegistryObject<BlockItem> LAMP = ITEMS.register("lamp",
 			() -> new BlockItem(BlockInit.LAMP.get(), new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB)));
