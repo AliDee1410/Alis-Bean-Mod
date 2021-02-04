@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "alis_bean_mod:block/lamp" },
+        "facing=south": { "model": "alis_bean_mod:block/lamp", "y": 180 },
+        "facing=west":  { "model": "alis_bean_mod:block/lamp", "y": 270 },
+        "facing=east":  { "model": "alis_bean_mod:block/lamp", "y": 90 }
+    }
+}

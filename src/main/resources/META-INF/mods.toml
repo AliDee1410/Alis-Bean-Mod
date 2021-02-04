@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+license="All rights reserved"
+
+[[mods]]
+modId="alis_bean_mod"
+version="1.0"
+displayName="Ali's Bean Mod"
+displayURL="https://github.com/AliDee1410/Alis-Bean-Mod"
+logoFile="alis_bean_mod_logo.png"
+credits=""
+authors="Ali_Dee_"
+description='''
+B E A N
+'''
+
+[[dependencies.alis_bean_mod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[35,)"
+    ordering="NONE"
+    side="BOTH"
+    
+[[dependencies.alis_bean_mod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.4,1.17)"
+    ordering="NONE"
+    side="BOTH"
