@@ -1,2 +1,2 @@
 # Alis-Bean-Mod
- The Unltimate Bean Experience.
+ The Ultimate Bean Experience.
