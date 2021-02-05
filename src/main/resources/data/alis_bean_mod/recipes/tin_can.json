@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "a a",
+        "aaa"
+    ],
+    "key": {
+        "a": {
+            "item": "alis_bean_mod:tin_ingot"
+        }
+    },
+    "result": {
+        "item": "alis_bean_mod:tin_can",
+        "count": 4
+    }
+}

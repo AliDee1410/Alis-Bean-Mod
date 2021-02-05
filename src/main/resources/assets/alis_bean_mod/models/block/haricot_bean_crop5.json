@@ -1,0 +1,6 @@
+{
+	"parent": "block/crop",
+	"textures": {
+		"crop": "alis_bean_mod:blocks/haricot_bean_crop_stage5"
+	}
+}

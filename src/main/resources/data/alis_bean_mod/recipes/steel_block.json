@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "aaa",
+        "aaa",
+        "aaa"
+    ],
+    "key": {
+        "a": {
+            "item": "alis_bean_mod:steel_ingot"
+        }
+    },
+    "result": {
+        "item": "alis_bean_mod:steel_block",
+        "count": 1
+    }
+}
