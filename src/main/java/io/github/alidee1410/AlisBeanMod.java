@@ -5,9 +5,11 @@ import org.apache.logging.log4j.Logger;
 
 import io.github.alidee1410.core.init.BlockInit;
 import io.github.alidee1410.core.init.ItemInit;
+import io.github.alidee1410.world.OreGeneration;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -27,14 +29,17 @@ public class AlisBeanMod
         
         // Register the Item Register...
         ItemInit.ITEMS.register(bus);
+        
         // Register the Block Register...
         BlockInit.BLOCKS.register(bus);
+        
+        // Generate Ores
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGeneration::generateOres);
         
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
+    private void setup(final FMLCommonSetupEvent event) {
     	
     }
     

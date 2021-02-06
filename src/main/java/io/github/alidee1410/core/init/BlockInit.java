@@ -35,6 +35,10 @@ public class BlockInit {
 					.sound(SoundType.METAL)
 					.setRequiresTool()));
 	
+	// Ores
+	public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore",
+			() -> new Block(AbstractBlock.Properties.from(Blocks.IRON_ORE)));
+	
 	// Custom Models
 	public static final RegistryObject<Lamp> LAMP = BLOCKS.register("lamp",
 			() -> new Lamp(AbstractBlock.Properties.create(Material.WOOD)

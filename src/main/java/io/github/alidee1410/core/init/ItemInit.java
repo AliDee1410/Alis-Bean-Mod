@@ -6,6 +6,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.item.Item.Properties;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -45,7 +46,6 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).maxStackSize(1).containerItem(Items.BOWL)));
 	
 	// Block Items
-	
 	public static final RegistryObject<BlockItem> LAMP = ITEMS.register("lamp",
 			() -> new BlockItem(BlockInit.LAMP.get(), new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB)));
 	
@@ -54,4 +54,7 @@ public class ItemInit {
 	
 	public static final RegistryObject<BlockItem> STEEL_BLOCK = ITEMS.register("steel_block",
 			() -> new BlockItem(BlockInit.STEEL_BLOCK.get(), new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB)));
+	
+	public static final RegistryObject<BlockItem> TIN_ORE = ITEMS.register("tin_ore",
+			() -> new BlockItem(BlockInit.TIN_ORE.get(), new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB)));
 }
