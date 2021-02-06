@@ -16,5 +16,7 @@ public class ClientEvents {
 	@SubscribeEvent
 	public static void clientSetup(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(BlockInit.HARICOT_BEAN_CROP.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.WILD_HARICOT_BEAN_BUSH.get(), RenderType.getCutout());
+		RenderTypeLookup.setRenderLayer(BlockInit.WILD_HARICOT_BEAN_CROP.get(), RenderType.getCutout());
 	}
 }

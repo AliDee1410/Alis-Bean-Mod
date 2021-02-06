@@ -4,6 +4,7 @@
 	"item.alis_bean_mod.tin_can": "Tin Can",
 	"item.alis_bean_mod.can_of_baked_beans": "Can of Baked Beans",
 	"item.alis_bean_mod.haricot_beans": "Haricot Beans",
+	"item.alis_bean_mod.wild_haricot_beans": "Wild Haricot Beans",
 	"item.alis_bean_mod.bowl_of_haricot_beans": "Bowl of Haricot Beans",
 	"item.alis_bean_mod.boiling_bowl_of_haricot_beans": "Boiling Bowl of Haricot Beans",
 	"item.alis_bean_mod.bean_juice": "Bowl of Bean Juice",
@@ -12,6 +13,8 @@
 	"block.alis_bean_mod.steel_block": "Block of Steel",
 	"block.alis_bean_mod.lamp": "Ali's Lamp",
 	"block.alis_bean_mod.haricot_bean_crop": "Haricot Bean Crop",
+	"block.alis_bean_mod.wild_haricot_bean_bush": "Haricot Bean Bush",
+	"block.alis_bean_mod.wild_haricot_bean_crop": "Wild Haricot Bean Crop",
 	"block.alis_bean_mod.tin_ore": "Tin Ore",
 	
 	"itemGroup.bean_mod_tab": "Ali's Bean Mod",

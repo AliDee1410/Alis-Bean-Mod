@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import io.github.alidee1410.core.init.BlockInit;
 import io.github.alidee1410.core.init.ItemInit;
-import io.github.alidee1410.world.OreGeneration;
+import io.github.alidee1410.world.BeanModGeneration;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,8 +33,9 @@ public class AlisBeanMod
         // Register the Block Register...
         BlockInit.BLOCKS.register(bus);
         
-        // Generate Ores
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGeneration::generateOres);
+        // World Generation
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, BeanModGeneration::generateOres);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, BeanModGeneration::generateBushPatches);
         
         MinecraftForge.EVENT_BUS.register(this);
     }

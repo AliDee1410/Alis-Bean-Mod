@@ -3,6 +3,8 @@ package io.github.alidee1410.core.init;
 import io.github.alidee1410.AlisBeanMod;
 import io.github.alidee1410.common.blocks.HaricotBeanCrop;
 import io.github.alidee1410.common.blocks.Lamp;
+import io.github.alidee1410.common.blocks.WildHaricotBeanBush;
+import io.github.alidee1410.common.blocks.WildHaricotBeanCrop;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -52,4 +54,16 @@ public class BlockInit {
 	// Crops
 	public static final RegistryObject<Block> HARICOT_BEAN_CROP = BLOCKS.register("haricot_bean_crop",
 			() -> new HaricotBeanCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
+	
+	public static final RegistryObject<Block> WILD_HARICOT_BEAN_CROP = BLOCKS.register("wild_haricot_bean_crop",
+			() -> new WildHaricotBeanCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
+	
+	// Bushes
+	public static final RegistryObject<Block> WILD_HARICOT_BEAN_BUSH = BLOCKS.register("wild_haricot_bean_bush",
+			() -> new WildHaricotBeanBush(AbstractBlock.Properties.create(Material.PLANTS)
+					.zeroHardnessAndResistance()
+					.doesNotBlockMovement()
+					.tickRandomly()
+					.sound(SoundType.PLANT)));
+	
 }

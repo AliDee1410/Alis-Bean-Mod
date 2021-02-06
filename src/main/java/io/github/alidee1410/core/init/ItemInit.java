@@ -6,7 +6,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.item.Item.Properties;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -27,13 +26,17 @@ public class ItemInit {
 			() -> new Item(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB)));
 
 	// Food
+	public static final RegistryObject<Item> WILD_HARICOT_BEANS = ITEMS.register("wild_haricot_beans",
+			() -> new BlockNamedItem(BlockInit.WILD_HARICOT_BEAN_CROP.get(), new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).food(FoodInit.HARICOT_BEANS)));
+	
+	public static final RegistryObject<Item> HARICOT_BEANS = ITEMS.register("haricot_beans",
+			() -> new BlockNamedItem(BlockInit.HARICOT_BEAN_CROP.get(), new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).food(FoodInit.HARICOT_BEANS)));
+	
 	public static final RegistryObject<CannedFoodItem> CAN_OF_BAKED_BEANS = ITEMS.register("can_of_baked_beans",
 			() -> new CannedFoodItem(new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).food(FoodInit.CAN_OF_BAKED_BEANS).maxStackSize(1)
 					.containerItem(ItemInit.TIN_CAN.get())));
 	
-	// Crop Food
-	public static final RegistryObject<Item> HARICOT_BEANS = ITEMS.register("haricot_beans",
-			() -> new BlockNamedItem(BlockInit.HARICOT_BEAN_CROP.get(), new Item.Properties().group(AlisBeanMod.BEAN_MOD_TAB).food(FoodInit.HARICOT_BEANS)));
+	
 	
 	// Ingredients
 	public static final RegistryObject<Item> BOWL_OF_HARICOT_BEANS = ITEMS.register("bowl_of_haricot_beans",

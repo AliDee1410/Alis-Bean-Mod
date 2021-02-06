@@ -1,0 +1,6 @@
+{
+	"parent": "block/cross",
+	"textures": {
+		"cross": "alis_bean_mod:blocks/wild_haricot_bean_bush_stage1"
+	}
+}
