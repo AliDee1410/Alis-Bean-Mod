@@ -20,6 +20,7 @@ import net.minecraft.world.IWorld;
 public class BaseHorizontalBlock extends Block {
 	
 	protected static final Map<Block, Map<Direction, VoxelShape>> SHAPES = new HashMap<Block, Map<Direction, VoxelShape>>();
+	
 	public static final DirectionProperty HORIZONTAL_FACING = BlockStateProperties.HORIZONTAL_FACING;
 
 	public BaseHorizontalBlock(Properties properties) {

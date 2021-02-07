@@ -1,6 +1,7 @@
 package io.github.alidee1410.core.init;
 
 import io.github.alidee1410.AlisBeanMod;
+import io.github.alidee1410.common.blocks.CustomFurnaceBlock;
 import io.github.alidee1410.common.blocks.HaricotBeanCrop;
 import io.github.alidee1410.common.blocks.Lamp;
 import io.github.alidee1410.common.blocks.WildHaricotBeanBush;
@@ -65,5 +66,9 @@ public class BlockInit {
 					.doesNotBlockMovement()
 					.tickRandomly()
 					.sound(SoundType.PLANT)));
+	
+	/* Machines!!!
+	public static final RegistryObject<Block> CUSTOM_FURNACE = BLOCKS.register("custom_furnace",
+			() -> new CustomFurnaceBlock(AbstractBlock.Properties.from(Blocks.FURNACE)));*/
 	
 }
