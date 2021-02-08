@@ -1,23 +1,24 @@
 {
-	"item.alis_bean_mod.tin_ingot": "Tin Ingot",
-	"item.alis_bean_mod.steel_ingot": "Steel Ingot",
-	"item.alis_bean_mod.tin_can": "Tin Can",
-	"item.alis_bean_mod.can_of_baked_beans": "Can of Baked Beans",
-	"item.alis_bean_mod.haricot_beans": "Haricot Beans",
 	"item.alis_bean_mod.wild_haricot_beans": "Wild Haricot Beans",
+	"item.alis_bean_mod.haricot_beans": "Haricot Beans",
 	"item.alis_bean_mod.bowl_of_haricot_beans": "Bowl of Haricot Beans",
 	"item.alis_bean_mod.boiling_bowl_of_haricot_beans": "Boiling Bowl of Haricot Beans",
-	"item.alis_bean_mod.bean_juice": "Bowl of Bean Juice",
+	"item.alis_bean_mod.bowl_of_baked_beans": "Bowl of Baked Beans",
+	"item.alis_bean_mod.steel_ingot": "Steel Ingot",
+	"item.alis_bean_mod.tin_ingot": "Tin Ingot",
+	"item.alis_bean_mod.tin_can": "Tin Can",
+	"item.alis_bean_mod.can_of_baked_beans": "Can of Baked Beans",
+	"item.alis_bean_mod.mortar_and_pestle": "Mortar and Pestle",
+	"item.alis_bean_mod.tomato": "Tomato",
+	"item.alis_bean_mod.tomato_seeds": "Tomato Seeds",
+	"item.alis_bean_mod.tomato_paste": "Tomato Paste",
+	"item.alis_bean_mod.corn": "Corn",
+	"item.alis_bean_mod.corn_seeds": "Corn Seeds",
+	"item.alis_bean_mod.corn_flour": "Corn Flour",
 	
-	"block.alis_bean_mod.tin_block": "Block of Tin",
 	"block.alis_bean_mod.steel_block": "Block of Steel",
-	"block.alis_bean_mod.lamp": "Ali's Lamp",
-	"block.alis_bean_mod.haricot_bean_crop": "Haricot Bean Crop",
-	"block.alis_bean_mod.wild_haricot_bean_bush": "Haricot Bean Bush",
-	"block.alis_bean_mod.wild_haricot_bean_crop": "Wild Haricot Bean Crop",
+	"block.alis_bean_mod.tin_block": "Block of Tin",
 	"block.alis_bean_mod.tin_ore": "Tin Ore",
 	
-	"itemGroup.bean_mod_tab": "Ali's Bean Mod",
-	
-	"tooltip.special_item.hold_shift": "Hold [SHIFT] for more information"
+	"itemGroup.bean_mod_tab": "Ali's Bean Mod"
 }

@@ -91,6 +91,7 @@ public class CustomFurnaceBlock extends BaseHorizontalBlock {
 		
 		return ActionResultType.SUCCESS;
 	}
+	
 	/*
 	@Override
 	public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {

@@ -1,4 +1,4 @@
-package io.github.alidee1410.common.blocks;
+package io.github.alidee1410.common.blocks.crops;
 
 import io.github.alidee1410.core.init.ItemInit;
 import net.minecraft.block.Block;

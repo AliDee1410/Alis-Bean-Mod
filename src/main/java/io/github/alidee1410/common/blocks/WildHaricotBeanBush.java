@@ -18,6 +18,8 @@ import net.minecraft.world.World;
 
 public class WildHaricotBeanBush extends SweetBerryBushBlock {
 
+	// TODO: BaseHarmlessBushBlock
+	
 	public WildHaricotBeanBush(Properties properties) {
 		super(properties);
 	}

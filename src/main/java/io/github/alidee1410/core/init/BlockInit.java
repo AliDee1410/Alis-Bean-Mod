@@ -2,10 +2,11 @@ package io.github.alidee1410.core.init;
 
 import io.github.alidee1410.AlisBeanMod;
 import io.github.alidee1410.common.blocks.CustomFurnaceBlock;
-import io.github.alidee1410.common.blocks.HaricotBeanCrop;
-import io.github.alidee1410.common.blocks.Lamp;
 import io.github.alidee1410.common.blocks.WildHaricotBeanBush;
-import io.github.alidee1410.common.blocks.WildHaricotBeanCrop;
+import io.github.alidee1410.common.blocks.crops.CornCrop;
+import io.github.alidee1410.common.blocks.crops.HaricotBeanCrop;
+import io.github.alidee1410.common.blocks.crops.TomatoCrop;
+import io.github.alidee1410.common.blocks.crops.WildHaricotBeanCrop;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -42,22 +43,18 @@ public class BlockInit {
 	public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore",
 			() -> new Block(AbstractBlock.Properties.from(Blocks.IRON_ORE)));
 	
-	// Custom Models
-	public static final RegistryObject<Lamp> LAMP = BLOCKS.register("lamp",
-			() -> new Lamp(AbstractBlock.Properties.create(Material.WOOD)
-					.hardnessAndResistance(2f, 3f)
-					.harvestTool(ToolType.AXE)
-					.harvestLevel(0)
-					.sound(SoundType.WOOD)
-					.setLightLevel((state) -> { return 15; })
-					.setRequiresTool()));
-	
 	// Crops
 	public static final RegistryObject<Block> HARICOT_BEAN_CROP = BLOCKS.register("haricot_bean_crop",
 			() -> new HaricotBeanCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
 	
 	public static final RegistryObject<Block> WILD_HARICOT_BEAN_CROP = BLOCKS.register("wild_haricot_bean_crop",
 			() -> new WildHaricotBeanCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
+	
+	public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",
+			() -> new TomatoCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
+	
+	public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+			() -> new CornCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
 	
 	// Bushes
 	public static final RegistryObject<Block> WILD_HARICOT_BEAN_BUSH = BLOCKS.register("wild_haricot_bean_bush",
@@ -66,7 +63,6 @@ public class BlockInit {
 					.doesNotBlockMovement()
 					.tickRandomly()
 					.sound(SoundType.PLANT)));
-	
 	/* Machines!!!
 	public static final RegistryObject<Block> CUSTOM_FURNACE = BLOCKS.register("custom_furnace",
 			() -> new CustomFurnaceBlock(AbstractBlock.Properties.from(Blocks.FURNACE)));*/

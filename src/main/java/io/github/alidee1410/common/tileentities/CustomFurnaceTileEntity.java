@@ -27,12 +27,12 @@ public class CustomFurnaceTileEntity extends TileEntity implements ITickableTile
 	/*
 	public CustomFurnaceTileEntity() {
 		this(TileEntityTypeInit.CUSTOM_FURNACE.get());
-	}
+	}*/
 	
 	@Override
 	public Container createMenu(final int windowID, final PlayerInventory playerInv, final PlayerEntity playerIn) {
-		return new CustomFurnaceContainer(windowID, playerInv, this);
-	}*/
+		return null;//new CustomFurnaceContainer(windowID, playerInv, this);
+	}
 	
 	@Override
 	public void tick() {
@@ -81,11 +81,5 @@ public class CustomFurnaceTileEntity extends TileEntity implements ITickableTile
 			compound.putString("CustomName", ITextComponent.Serializer.toJson(customName));
 		}
 		return compound;
-	}
-
-	@Override
-	public Container createMenu(int p_createMenu_1_, PlayerInventory p_createMenu_2_, PlayerEntity p_createMenu_3_) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
