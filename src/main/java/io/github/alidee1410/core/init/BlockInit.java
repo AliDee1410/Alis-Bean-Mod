@@ -1,12 +1,12 @@
 package io.github.alidee1410.core.init;
 
 import io.github.alidee1410.AlisBeanMod;
-import io.github.alidee1410.common.blocks.CustomFurnaceBlock;
 import io.github.alidee1410.common.blocks.WildHaricotBeanBush;
 import io.github.alidee1410.common.blocks.crops.CornCrop;
 import io.github.alidee1410.common.blocks.crops.HaricotBeanCrop;
 import io.github.alidee1410.common.blocks.crops.TomatoCrop;
 import io.github.alidee1410.common.blocks.crops.WildHaricotBeanCrop;
+import io.github.alidee1410.common.blocks.machines.CanningMachineBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -63,8 +63,12 @@ public class BlockInit {
 					.doesNotBlockMovement()
 					.tickRandomly()
 					.sound(SoundType.PLANT)));
-	/* Machines!!!
-	public static final RegistryObject<Block> CUSTOM_FURNACE = BLOCKS.register("custom_furnace",
-			() -> new CustomFurnaceBlock(AbstractBlock.Properties.from(Blocks.FURNACE)));*/
 	
+	public static final RegistryObject<Block> CANNING_MACHINE = BLOCKS.register("canning_machine",
+			() -> new CanningMachineBlock(AbstractBlock.Properties.create(Material.IRON)
+					.hardnessAndResistance(3.5f, 5f)
+					.harvestTool(ToolType.PICKAXE)
+					.harvestLevel(1)
+					.sound(SoundType.METAL)
+					.setRequiresTool()));
 }
