@@ -7,8 +7,6 @@ import io.github.alidee1410.core.init.BlockInit;
 import io.github.alidee1410.core.init.ItemInit;
 import io.github.alidee1410.core.init.TileEntityTypeInit;
 import io.github.alidee1410.world.BeanModGeneration;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -16,25 +14,21 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(AlisBeanMod.MOD_ID)
 public class AlisBeanMod
 {
-    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "alis_bean_mod";
-    public static final ItemGroup BEAN_MOD_TAB = new BeanModTab("bean_mod_tab");
+    
+    public static final Logger LOGGER = LogManager.getLogger();
+    public static final BeanModCreativeTab CREATIVE_TAB = new BeanModCreativeTab();
 
     public AlisBeanMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::setup);
         
-        // Register the Item Register...
+        // Registers
         ItemInit.ITEMS.register(bus);
-        
-        // Register the Block Register...
         BlockInit.BLOCKS.register(bus);
-        
-        // Register the Tile Entity Type Register
         TileEntityTypeInit.TILE_ENTITY_TYPES.register(bus);
         
         // World Generation
@@ -46,17 +40,5 @@ public class AlisBeanMod
 
     private void setup(final FMLCommonSetupEvent event) {
     	
-    }
-    
-    public static class BeanModTab extends ItemGroup {
-    	
-		public BeanModTab(String label) {
-			super(label);
-		}
-
-		@Override
-		public ItemStack createIcon() {
-			return ItemInit.HARICOT_BEANS.get().getDefaultInstance();
-		}
     }
 }

@@ -22,14 +22,10 @@ public class CanningMachineBlock extends Block {
 	}
 	
 	@Override
-	public boolean hasTileEntity(BlockState state) {
-		return true;
-	}
+	public boolean hasTileEntity(BlockState state) { return true; }
 	
 	@Override
-	public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-		return new CanningMachineTile();
-	}
+	public TileEntity createTileEntity(BlockState state, IBlockReader world) { return new CanningMachineTile(); }
 	
 	@Override
 	protected void fillStateContainer(Builder<Block, BlockState> builder) {

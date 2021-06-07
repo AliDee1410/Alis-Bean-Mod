@@ -1,4 +1,4 @@
-package io.github.alidee1410.common.items;
+package io.github.alidee1410.common.items.base;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

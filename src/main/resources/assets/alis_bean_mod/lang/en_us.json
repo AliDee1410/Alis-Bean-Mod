@@ -19,7 +19,8 @@
 	"block.alis_bean_mod.steel_block": "Block of Steel",
 	"block.alis_bean_mod.tin_block": "Block of Tin",
 	"block.alis_bean_mod.tin_ore": "Tin Ore",
+	
 	"block.alis_bean_mod.canning_machine": "Canning Machine",
 	
-	"itemGroup.bean_mod_tab": "Ali's Bean Mod"
+	"itemGroup.bean_mod_creative_tab": "Ali's Bean Mod"
 }

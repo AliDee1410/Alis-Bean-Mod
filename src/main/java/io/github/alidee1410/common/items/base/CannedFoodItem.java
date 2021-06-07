@@ -1,4 +1,4 @@
-package io.github.alidee1410.common.items;
+package io.github.alidee1410.common.items.base;
 
 import io.github.alidee1410.core.init.ItemInit;
 import net.minecraft.entity.LivingEntity;
@@ -9,6 +9,8 @@ import net.minecraft.world.World;
 
 public class CannedFoodItem extends SoupItem {
 
+	// Basically just like vanilla soup items but in a can instead of a bowl
+	
 	public CannedFoodItem(Properties builder) {
 		super(builder);
 	}

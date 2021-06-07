@@ -1,10 +1,10 @@
 package io.github.alidee1410.core.init;
 
 import io.github.alidee1410.AlisBeanMod;
-import io.github.alidee1410.common.blocks.WildHaricotBeanBush;
 import io.github.alidee1410.common.blocks.crops.CornCrop;
 import io.github.alidee1410.common.blocks.crops.HaricotBeanCrop;
 import io.github.alidee1410.common.blocks.crops.TomatoCrop;
+import io.github.alidee1410.common.blocks.crops.WildHaricotBeanBush;
 import io.github.alidee1410.common.blocks.crops.WildHaricotBeanCrop;
 import io.github.alidee1410.common.blocks.machines.CanningMachineBlock;
 import net.minecraft.block.AbstractBlock;

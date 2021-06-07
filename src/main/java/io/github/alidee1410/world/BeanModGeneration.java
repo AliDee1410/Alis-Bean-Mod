@@ -2,7 +2,7 @@ package io.github.alidee1410.world;
 
 import com.google.common.collect.ImmutableSet;
 
-import io.github.alidee1410.common.blocks.WildHaricotBeanBush;
+import io.github.alidee1410.common.blocks.crops.WildHaricotBeanBush;
 import io.github.alidee1410.core.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
