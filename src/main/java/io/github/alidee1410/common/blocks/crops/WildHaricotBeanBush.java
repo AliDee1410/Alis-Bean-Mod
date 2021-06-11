@@ -2,7 +2,9 @@ package io.github.alidee1410.common.blocks.crops;
 
 import io.github.alidee1410.core.init.ItemInit;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.SweetBerryBushBlock;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -20,8 +22,12 @@ public class WildHaricotBeanBush extends SweetBerryBushBlock {
 
 	// TODO: BaseHarmlessBushBlock
 	
-	public WildHaricotBeanBush(Properties properties) {
-		super(properties);
+	public WildHaricotBeanBush() {
+		super(Properties.create(Material.PLANTS)
+				.zeroHardnessAndResistance()
+				.doesNotBlockMovement()
+				.tickRandomly()
+				.sound(SoundType.PLANT));
 	}
 
 	@Override

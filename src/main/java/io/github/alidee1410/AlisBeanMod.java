@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import io.github.alidee1410.core.init.BlockInit;
+import io.github.alidee1410.core.init.ContainerTypeInit;
 import io.github.alidee1410.core.init.ItemInit;
 import io.github.alidee1410.core.init.TileEntityTypeInit;
 import io.github.alidee1410.world.BeanModGeneration;
@@ -30,6 +31,8 @@ public class AlisBeanMod
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
         TileEntityTypeInit.TILE_ENTITY_TYPES.register(bus);
+        ContainerTypeInit.CONTAINER_TYPES.register(bus);
+        
         
         // World Generation
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, BeanModGeneration::generateOres);

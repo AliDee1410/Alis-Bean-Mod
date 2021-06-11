@@ -1,7 +1,10 @@
 package io.github.alidee1410.client.util;
 
 import io.github.alidee1410.AlisBeanMod;
+import io.github.alidee1410.common.blocks.machines.CanningMachineScreen;
 import io.github.alidee1410.core.init.BlockInit;
+import io.github.alidee1410.core.init.ContainerTypeInit;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.api.distmarker.Dist;
@@ -15,6 +18,9 @@ public class ClientEvents {
 	
 	@SubscribeEvent
 	public static void clientSetup(FMLClientSetupEvent event) {
+		// Connect container to gui
+		ScreenManager.registerFactory(ContainerTypeInit.CANNING_MACHINE_CONTAINER.get(), CanningMachineScreen::new);
+		
 		RenderTypeLookup.setRenderLayer(BlockInit.HARICOT_BEAN_CROP.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.WILD_HARICOT_BEAN_BUSH.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.WILD_HARICOT_BEAN_CROP.get(), RenderType.getCutout());

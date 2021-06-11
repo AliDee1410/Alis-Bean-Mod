@@ -13,5 +13,5 @@ public class TileEntityTypeInit {
 			.create(ForgeRegistries.TILE_ENTITIES, AlisBeanMod.MOD_ID);
 	
 	public static final RegistryObject<TileEntityType<CanningMachineTile>> CANNING_MACHINE = TILE_ENTITY_TYPES
-			.register("canning_machine", () -> TileEntityType.Builder.create(CanningMachineTile::new, BlockInit.CANNING_MACHINE.get()).build(null));
+			.register("canning_machine_tile", () -> TileEntityType.Builder.create(CanningMachineTile::new, BlockInit.CANNING_MACHINE.get()).build(null));
 }

@@ -1,8 +1,10 @@
 package io.github.alidee1410.common.blocks.crops;
 
 import io.github.alidee1410.core.init.ItemInit;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.CropsBlock;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
@@ -22,8 +24,8 @@ public class WildHaricotBeanCrop extends CropsBlock {
 			Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
 			Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-	public WildHaricotBeanCrop(Properties builder) {
-		super(builder);
+	public WildHaricotBeanCrop() {
+		super(AbstractBlock.Properties.from(Blocks.WHEAT));
 	}
 
 	@Override

@@ -45,30 +45,21 @@ public class BlockInit {
 	
 	// Crops
 	public static final RegistryObject<Block> HARICOT_BEAN_CROP = BLOCKS.register("haricot_bean_crop",
-			() -> new HaricotBeanCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
+			() -> new HaricotBeanCrop());
 	
 	public static final RegistryObject<Block> WILD_HARICOT_BEAN_CROP = BLOCKS.register("wild_haricot_bean_crop",
-			() -> new WildHaricotBeanCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
+			() -> new WildHaricotBeanCrop());
 	
 	public static final RegistryObject<Block> TOMATO_CROP = BLOCKS.register("tomato_crop",
-			() -> new TomatoCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
+			() -> new TomatoCrop());
 	
 	public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
-			() -> new CornCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
+			() -> new CornCrop());
 	
 	// Bushes
 	public static final RegistryObject<Block> WILD_HARICOT_BEAN_BUSH = BLOCKS.register("wild_haricot_bean_bush",
-			() -> new WildHaricotBeanBush(AbstractBlock.Properties.create(Material.PLANTS)
-					.zeroHardnessAndResistance()
-					.doesNotBlockMovement()
-					.tickRandomly()
-					.sound(SoundType.PLANT)));
+			() -> new WildHaricotBeanBush());
 	
 	public static final RegistryObject<Block> CANNING_MACHINE = BLOCKS.register("canning_machine",
-			() -> new CanningMachineBlock(AbstractBlock.Properties.create(Material.IRON)
-					.hardnessAndResistance(3.5f, 5f)
-					.harvestTool(ToolType.PICKAXE)
-					.harvestLevel(1)
-					.sound(SoundType.METAL)
-					.setRequiresTool()));
+			() -> new CanningMachineBlock());
 }
