@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"facing=north,lit=false": { "model": "alis_bean_mod:block/coal_power_generator" },
+		"facing=south,lit=false": { "model": "alis_bean_mod:block/coal_power_generator", "y": 180 },
+		"facing=west,lit=false": { "model": "alis_bean_mod:block/coal_power_generator",  "y": 270},
+		"facing=east,lit=false": { "model": "alis_bean_mod:block/coal_power_generator", "y": 90 },
+		"facing=north,lit=true": { "model": "alis_bean_mod:block/coal_power_generator_lit" },
+		"facing=south,lit=true": { "model": "alis_bean_mod:block/coal_power_generator_lit", "y": 180 },
+		"facing=west,lit=true": { "model": "alis_bean_mod:block/coal_power_generator_lit",  "y": 270},
+		"facing=east,lit=true": { "model": "alis_bean_mod:block/coal_power_generator_lit", "y": 90 }
+	}
+}

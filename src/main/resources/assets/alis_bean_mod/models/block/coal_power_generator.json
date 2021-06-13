@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "alis_bean_mod:blocks/coal_power_generator_side",
+		"up": "alis_bean_mod:blocks/coal_power_generator_side",
+		"down": "alis_bean_mod:blocks/coal_power_generator_side",
+		"east": "alis_bean_mod:blocks/coal_power_generator_side",
+		"west": "alis_bean_mod:blocks/coal_power_generator_side",
+		"south": "alis_bean_mod:blocks/coal_power_generator_side",
+		"north": "alis_bean_mod:blocks/coal_power_generator_front"
+	}
+}

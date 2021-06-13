@@ -1,10 +1,10 @@
-package io.github.alidee1410.common.blocks.machines;
+package io.github.alidee1410.common.blocks.base;
 
+import java.util.function.Supplier;
+
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.container.INamedContainerProvider;
@@ -20,36 +20,30 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-public class CanningMachineBlock extends Block {
+public class MachineBlock extends Block {
 
-	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+	protected static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+	protected final Supplier<? extends MachineTile> supplier;
 	
-	public CanningMachineBlock() {
-		super(Properties.create(Material.IRON)
-				.hardnessAndResistance(3.5f, 5f)
-				.harvestTool(ToolType.PICKAXE)
-				.harvestLevel(1)
-				.sound(SoundType.METAL)
-				.setRequiresTool()
-				.setLightLevel(state -> state.get(BlockStateProperties.POWERED) ? 14 : 0));
+	public MachineBlock(AbstractBlock.Properties properties, Supplier<? extends MachineTile> supplier) {
+		super(properties);
+		this.supplier = supplier;
 		
-		this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(BlockStateProperties.POWERED, false));
+		this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(BlockStateProperties.LIT, false));
 	}
 	
 	@Override
 	public boolean hasTileEntity(BlockState state) { return true; }
 	
 	@Override
-	public TileEntity createTileEntity(BlockState state, IBlockReader world) { return new CanningMachineTile(); }
-	
+	public TileEntity createTileEntity(BlockState state, IBlockReader world) { return supplier.get(); }
 	
 	@Override
 	protected void fillStateContainer(Builder<Block, BlockState> builder) {
 		super.fillStateContainer(builder);
-		builder.add(FACING, BlockStateProperties.POWERED);
+		builder.add(FACING, BlockStateProperties.LIT);
 	}
 	
 	@Override
@@ -63,10 +57,10 @@ public class CanningMachineBlock extends Block {
 		// Make sure world isn't remote (it is server-side)
 		if (!worldIn.isRemote) {
 			TileEntity tileEntity = worldIn.getTileEntity(pos);
-			if (tileEntity instanceof CanningMachineTile) {
+			if (tileEntity instanceof MachineTile) {
 				
 				// Handles opening gui client-side for us
-				NetworkHooks.openGui((ServerPlayerEntity) player, (INamedContainerProvider) tileEntity, tileEntity.getPos());
+				NetworkHooks.openGui((ServerPlayerEntity) player, (INamedContainerProvider) tileEntity, pos);
 			} else {
 				throw new IllegalStateException("Named container provider is missing!");
 			}

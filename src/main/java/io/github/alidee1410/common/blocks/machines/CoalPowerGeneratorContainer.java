@@ -18,19 +18,20 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-public class CanningMachineContainer extends Container {
+public class CoalPowerGeneratorContainer extends Container {
 
 	private TileEntity tileEntity;
 	private PlayerEntity player;
 	private IItemHandler playerInv;
 	
-	public CanningMachineContainer(int windowId, PlayerInventory playerInv, CanningMachineTile tileEntity) {
-		super(ContainerTypeInit.CANNING_MACHINE_CONTAINER.get(), windowId);
+	public CoalPowerGeneratorContainer(int windowId, PlayerInventory playerInv, CoalPowerGeneratorTile tileEntity) {
+		super(ContainerTypeInit.COAL_POWER_GENERATOR_CONTAINER.get(), windowId);
 		
 		this.tileEntity = tileEntity;
 		this.player = playerInv.player;
 		this.playerInv = new InvWrapper(playerInv);
 		
+		// Coal Generator Inventory Slots
 		if (tileEntity != null) {
 			tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
 				addSlot(new SlotItemHandler(handler, 0, 64, 24));
@@ -41,8 +42,8 @@ public class CanningMachineContainer extends Container {
 		trackPower();
 	}
 	
-	public CanningMachineContainer(int windowId, PlayerInventory playerInv, PacketBuffer data) {
-		this(windowId, playerInv, (CanningMachineTile) playerInv.player.world.getTileEntity(data.readBlockPos()));
+	public CoalPowerGeneratorContainer(int windowId, PlayerInventory playerInv, PacketBuffer data) {
+		this(windowId, playerInv, (CoalPowerGeneratorTile) playerInv.player.world.getTileEntity(data.readBlockPos()));
 	}
 	
 	private void layoutPlayerInventorySlots(int leftCol, int topRow) {
@@ -113,7 +114,7 @@ public class CanningMachineContainer extends Container {
 
 	@Override
 	public boolean canInteractWith(PlayerEntity playerIn) {
-		return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), player, BlockInit.CANNING_MACHINE.get());
+		return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), player, BlockInit.COAL_POWER_GENERATOR.get());
 	}
 	
 	@Override
@@ -129,7 +130,7 @@ public class CanningMachineContainer extends Container {
 				}
 				slot.onSlotChange(stackBefore, stackAfter);
 			} else { // If slot is not fuel slot (slot has to be in player inv)
-				if (stackBefore.getItem() == CanningMachineTile.FUEL) { // If item in slot is valid fuel item
+				if (CoalPowerGeneratorTile.FUELS.contains(stackBefore.getItem())) { // If item in slot is valid fuel item
 					if (!this.mergeItemStack(stackBefore, 0, 1, false)) { // Try to merge stack into fuel slot
 						return ItemStack.EMPTY;
 					}

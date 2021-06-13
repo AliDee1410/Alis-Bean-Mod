@@ -83,6 +83,6 @@ public class ItemInit {
 	public static final RegistryObject<BlockItem> TIN_ORE = ITEMS.register("tin_ore",
 			() -> new BlockItem(BlockInit.TIN_ORE.get(), new Item.Properties().group(AlisBeanMod.CREATIVE_TAB)));
 	
-	public static final RegistryObject<BlockItem> CANNING_BLOCK = ITEMS.register("canning_machine",
-			() -> new BlockItem(BlockInit.CANNING_MACHINE.get(), new Item.Properties().group(AlisBeanMod.CREATIVE_TAB)));
+	public static final RegistryObject<BlockItem> COAL_POWER_GENERATOR = ITEMS.register("coal_power_generator",
+			() -> new BlockItem(BlockInit.COAL_POWER_GENERATOR.get(), new Item.Properties().group(AlisBeanMod.CREATIVE_TAB)));
 }

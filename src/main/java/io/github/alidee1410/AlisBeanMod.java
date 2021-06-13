@@ -14,6 +14,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+//import net.minecraftforge.fluids.FluidStack;
+//import net.minecraftforge.fluids.IFluidTank;
+//import net.minecraftforge.fluids.capability.IFluidHandler;
+//import net.minecraftforge.fluids.capability.TileFluidHandler;
+//import net.minecraftforge.common.Tags;
 
 @Mod(AlisBeanMod.MOD_ID)
 public class AlisBeanMod
@@ -32,7 +37,6 @@ public class AlisBeanMod
         BlockInit.BLOCKS.register(bus);
         TileEntityTypeInit.TILE_ENTITY_TYPES.register(bus);
         ContainerTypeInit.CONTAINER_TYPES.register(bus);
-        
         
         // World Generation
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, BeanModGeneration::generateOres);

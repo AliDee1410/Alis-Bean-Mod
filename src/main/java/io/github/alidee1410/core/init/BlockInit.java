@@ -1,17 +1,20 @@
 package io.github.alidee1410.core.init;
 
 import io.github.alidee1410.AlisBeanMod;
+import io.github.alidee1410.common.blocks.base.MachineBlock;
 import io.github.alidee1410.common.blocks.crops.CornCrop;
 import io.github.alidee1410.common.blocks.crops.HaricotBeanCrop;
 import io.github.alidee1410.common.blocks.crops.TomatoCrop;
 import io.github.alidee1410.common.blocks.crops.WildHaricotBeanBush;
 import io.github.alidee1410.common.blocks.crops.WildHaricotBeanCrop;
-import io.github.alidee1410.common.blocks.machines.CanningMachineBlock;
+import io.github.alidee1410.common.blocks.machines.CoalPowerGeneratorTile;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.AbstractBlock.Properties;
 import net.minecraft.block.material.Material;
+import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -60,6 +63,15 @@ public class BlockInit {
 	public static final RegistryObject<Block> WILD_HARICOT_BEAN_BUSH = BLOCKS.register("wild_haricot_bean_bush",
 			() -> new WildHaricotBeanBush());
 	
-	public static final RegistryObject<Block> CANNING_MACHINE = BLOCKS.register("canning_machine",
-			() -> new CanningMachineBlock());
+	// Machines
+	public static final RegistryObject<Block> COAL_POWER_GENERATOR = BLOCKS.register("coal_power_generator",
+			() -> new MachineBlock(Properties.create(Material.IRON)
+					.hardnessAndResistance(3.5f, 5f)
+					.harvestTool(ToolType.PICKAXE)
+					.harvestLevel(1)
+					.sound(SoundType.METAL)
+					.setRequiresTool()
+					.setLightLevel(state -> state.get(BlockStateProperties.LIT) ? 14 : 0),
+					CoalPowerGeneratorTile::new));
+	
 }

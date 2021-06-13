@@ -10,11 +10,11 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class CanningMachineScreen extends ContainerScreen<CanningMachineContainer> {
+public class CoalPowerGeneratorScreen extends ContainerScreen<CoalPowerGeneratorContainer> {
 
 	private ResourceLocation GUI = new ResourceLocation(AlisBeanMod.MOD_ID, "textures/gui/canning_machine_gui.png");
 	
-	public CanningMachineScreen(CanningMachineContainer container, PlayerInventory playerInv, ITextComponent name) {
+	public CoalPowerGeneratorScreen(CoalPowerGeneratorContainer container, PlayerInventory playerInv, ITextComponent name) {
 		super(container, playerInv, name);
 	}
 	

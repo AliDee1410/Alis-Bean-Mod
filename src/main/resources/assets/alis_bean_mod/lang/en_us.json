@@ -20,9 +20,9 @@
 	"block.alis_bean_mod.tin_block": "Block of Tin",
 	"block.alis_bean_mod.tin_ore": "Tin Ore",
 	
-	"block.alis_bean_mod.canning_machine": "Canning Machine",
+	"block.alis_bean_mod.coal_power_generator": "Coal Power Generator",
 	
-	"screen.alis_bean_mod.canning_machine": "Canning Machine",
+	"screen.alis_bean_mod.coal_power_generator": "Coal Power Generator",
 	
 	"itemGroup.bean_mod_creative_tab": "Ali's Bean Mod"
 }

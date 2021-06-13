@@ -1,7 +1,7 @@
 package io.github.alidee1410.client.util;
 
 import io.github.alidee1410.AlisBeanMod;
-import io.github.alidee1410.common.blocks.machines.CanningMachineScreen;
+import io.github.alidee1410.common.blocks.machines.CoalPowerGeneratorScreen;
 import io.github.alidee1410.core.init.BlockInit;
 import io.github.alidee1410.core.init.ContainerTypeInit;
 import net.minecraft.client.gui.ScreenManager;
@@ -19,7 +19,7 @@ public class ClientEvents {
 	@SubscribeEvent
 	public static void clientSetup(FMLClientSetupEvent event) {
 		// Connect container to gui
-		ScreenManager.registerFactory(ContainerTypeInit.CANNING_MACHINE_CONTAINER.get(), CanningMachineScreen::new);
+		ScreenManager.registerFactory(ContainerTypeInit.COAL_POWER_GENERATOR_CONTAINER.get(), CoalPowerGeneratorScreen::new);
 		
 		RenderTypeLookup.setRenderLayer(BlockInit.HARICOT_BEAN_CROP.get(), RenderType.getCutout());
 		RenderTypeLookup.setRenderLayer(BlockInit.WILD_HARICOT_BEAN_BUSH.get(), RenderType.getCutout());

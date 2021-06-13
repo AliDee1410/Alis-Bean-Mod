@@ -23,7 +23,7 @@ public class MachineEnergyStorage extends EnergyStorage implements INBTSerializa
     public void addEnergy(int energy) {
         this.energy += energy;
         if (this.energy > getMaxEnergyStored()) {
-            this.energy = getEnergyStored();
+            this.energy = getMaxEnergyStored();
         }
         onEnergyChanged();
     }
@@ -34,6 +34,10 @@ public class MachineEnergyStorage extends EnergyStorage implements INBTSerializa
             this.energy = 0;
         }
         onEnergyChanged();
+    }
+    
+    public boolean isFull() {
+    	return getEnergyStored() >= getMaxEnergyStored();
     }
 
     @Override
